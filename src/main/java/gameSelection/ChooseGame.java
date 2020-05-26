@@ -10,14 +10,14 @@ public class ChooseGame {
                 ":\"Угадать число\"\n" +
                 "Напиши название игры:");
         String word = game.nextLine();
-        if (word.equals("Загадать число")) {
+        if (word.equalsIgnoreCase("Загадать число")) {
             System.out.println("Мне она тоже нравиться, начинаем!");
             GameOne.playGameOne();
-        } else if (word.equals("Угадать число")) {
+        } else if (word.equalsIgnoreCase("Угадать число")) {
             System.out.println("Отличный выбор, начинаем");
             GameTwo.playGameTwo();
         } else  {
-            word.equals("Выйти");
+            word.equalsIgnoreCase("Выйти");
                 System.out.println("Спасибо за игру");
                 exitGame();
         }
